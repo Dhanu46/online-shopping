@@ -1,0 +1,78 @@
+html{
+	height:100%;
+}
+
+
+body {
+  padding-top:70px;
+  height:100%;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+.carousel-holder {
+  margin-bottom: 30px;
+}
+
+.carousel-control,.item {
+  border-radius: 4px;
+}
+
+.caption {
+  height: 130px;
+  overflow: hidden;
+}
+
+.caption h4 {
+  white-space: nowrap;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.ratings {
+  color: #d17581;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.thumbnail {
+  padding: 0;
+}
+
+.thumbnail .caption-full {
+  padding: 9px;
+  color: #333;
+}
+
+footer {
+  margin: 0;
+}
+
+/*
+custom styling sheet
+*/
+
+.wrapper {	
+	min-height:100%;
+	position:relative;
+}
+
+
+.content {
+	padding-bottom: 60px; /*height of the footer*/	
+}
+
+
+.footer {
+	width:100%;
+	position:absolute;
+	bottom:20px;
+	height: 60px;
+	
+}
+
+
