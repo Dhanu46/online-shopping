@@ -5,7 +5,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright
+                    <p>Copyright &copy; DHANUSH ACHARYA
                     </p>
                 </div>
             </div>

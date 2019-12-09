@@ -62,7 +62,12 @@
 			<c:if test="${userClickContact == true }">
 				<%@ include file="contact.jsp"%>
 			</c:if>
-
+			
+			<!-- loading the home content only when user press ALL PRODUCTS button -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+				<%@include file="listproducts.jsp"%>
+			</c:if>
+			
 		</div>
 
 		<!-- Footer comes here -->

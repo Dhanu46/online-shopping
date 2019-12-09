@@ -2,12 +2,10 @@ html{
 	height:100%;
 }
 
-
 body {
   padding-top:70px;
   height:100%;
 }
-
 .slide-image {
   width: 100%;
 }
@@ -63,7 +61,8 @@ custom styling sheet
 
 
 .content {
-	padding-bottom: 60px; /*height of the footer*/	
+	padding-bottom: 60px; /*height of the footer*/
+	
 }
 
 
@@ -72,6 +71,7 @@ custom styling sheet
 	position:absolute;
 	bottom:20px;
 	height: 60px;
+
 	
 }
 
