@@ -51,10 +51,13 @@ public class HibernateConfig {
 		builder.scanPackages("com.acharya.shoppingbackend.dto");
 
 		return builder.buildSessionFactory();
+		
 	}
 
 	// ALL THE HIBERNATE PROPERTIES WRITTEN IN THIS
 
+	
+	
 	private Properties getHibernateProperties() {
 
 		Properties properties = new Properties();

@@ -83,6 +83,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 		
 		catch(Exception ex){
+			System.out.println("creation problem");
 			ex.printStackTrace();
 			return false;
 			
