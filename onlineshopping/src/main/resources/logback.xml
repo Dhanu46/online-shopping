@@ -8,7 +8,7 @@
 	</appender>
 
 	
-	<logger name="net.kzn" level="DEBUG" additivity = "false">
+	<logger name="com.acharya" level="DEBUG" additivity = "false">
 		<appender-ref ref="consoleAppender"/>	
 	</logger>	
 

@@ -8,3 +8,6 @@ CREATE TABLE category (
 	CONSTRAINT pk_category_id PRIMARY KEY (id) 
 
 );
+
+INSERT INTO category (name, description,image_url,is_active)
+VALUES ('Laptop', 'This is description for Laptop category!', 'CAT_2.png', true);
