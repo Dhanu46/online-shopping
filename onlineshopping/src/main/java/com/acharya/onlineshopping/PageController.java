@@ -14,6 +14,8 @@ public class PageController {
 
 	@Autowired
 	private CategoryDAO categoryDAO;
+	
+
 
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
