@@ -21,7 +21,7 @@ public class CategoryTestCase {
 	public static void init() {
 		
 		context = new AnnotationConfigApplicationContext();
-		context.scan("com.acharya.shoppingbackend.dto");
+		context.scan("com.acharya.shoppingbackend");
 		context.refresh();
 		
 		categoryDAO = (CategoryDAO)context.getBean("categoryDAO");
