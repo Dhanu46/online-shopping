@@ -24,6 +24,8 @@
 
 <script>
 	window.menu = '${title}';
+	
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -31,6 +33,9 @@
 
 <!-- Bootswatch theme CSS -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+<!-- Bootstrap dataTable CSS -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -67,20 +72,30 @@
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listproducts.jsp"%>
 			</c:if>
+				
+			<!-- load only when user click show product-->
+			<c:if test="${userClickShowProduct == true }">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 			
 		</div>
 
 		<!-- Footer comes here -->
 		<%@include file="./shared/footer.jsp"%>
 
-		<!-- JavaScript -->
+		<!-- JQuery -->
 		<script src="${js}/jquery.js"></script>
 
+		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.js"></script>
 
+		<!-- Datatable plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- Datatable plugin -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<!-- Self coded javascript file -->
-
-
 		<script src="${js}/myapp.js"></script>
 	</div>
 

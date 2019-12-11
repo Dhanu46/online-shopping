@@ -28,6 +28,8 @@
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		
 
 		<!-- SPRING WEB MVC -->
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
@@ -35,6 +37,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+				</exclusions>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/jstl/jstl -->

@@ -1,19 +1,29 @@
 package com.acharya.onlineshopping.Controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.acharya.onlineshopping.exception.ProductNotFoundException;
 import com.acharya.shoppingbackend.dao.CategoryDAO;
+import com.acharya.shoppingbackend.dao.ProductDAO;
 import com.acharya.shoppingbackend.dto.Category;
+import com.acharya.shoppingbackend.dto.Product;
 
 @Controller
 public class PageController {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(PageController.class);
+	
 	@Autowired
 	private CategoryDAO categoryDAO;
+	
+	@Autowired
+	private ProductDAO productDAO;
 	
 
 
@@ -22,6 +32,11 @@ public class PageController {
 
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
+		
+		logger.info("Inside PaeController index method -INFO");
+		logger.debug("Inside PaeController index method -DEBUG");
+		
+		
 		mv.addObject("userClickHome", true);
 
 		mv.addObject("categories", categoryDAO.list());
@@ -99,5 +114,41 @@ public class PageController {
 	 * ModelAndView mv = new ModelAndView("page");
 	 * mv.addObject("greeting",greeting); return mv; }
 	 */
+	
+	/* viewing a single product */
+	
+	@RequestMapping(value="/show/{id}/product")
+	public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
+		
+		ModelAndView mv = new ModelAndView("page");
+		
+		Product product = productDAO.get(id);
+		
+		if(product==null) throw new ProductNotFoundException();
+		
+		//updating the view count
+		product.setViews(product.getViews()+1);
+		productDAO.update(product);
+		//---------------
+		
+		mv.addObject("title", product.getName());
+		mv.addObject("product", product);
+		
+		mv.addObject("userClickShowProduct", true);
+		
+		
+		return mv;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
