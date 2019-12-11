@@ -1,4 +1,4 @@
-package com.acharya.onlineshopping;
+package com.acharya.onlineshopping.Controller;
 
 import java.util.List;
 

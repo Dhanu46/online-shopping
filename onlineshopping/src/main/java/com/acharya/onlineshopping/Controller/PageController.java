@@ -1,4 +1,4 @@
-package com.acharya.onlineshopping;
+package com.acharya.onlineshopping.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
